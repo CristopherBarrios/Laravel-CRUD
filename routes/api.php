@@ -9,10 +9,7 @@ Route::get('/students', [studentController::class,'index']);
     Route::get('/students/{id}', function () {
     return 'Obteniendo un estudiante';
     });
-    Route::post('/students', function () {
-    return 'Creando estudiantes';
-
-    });
+    Route::post('/students',  [studentController::class,'store']);
     Route::put('/students/{id}', function () {
     return 'Actualizando estudiante';
     });
